@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="discount.css">
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="order.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h1>Create product discount</h1>
+            </header>
+            <div class="pro">
+                <div class="col1">
+                    <div class="discount-container">
+                        <h2>Buy x get y</h2>
+                        <label for="discount-method">Method</label>
+                        <div class="method-toggle">
+                            <button id="discount-code-btn" class="active">Discount code</button>
+                            <button id="automatic-discount-btn">Automatic discount</button>
+                        </div>
+                        <div id="discount-code-section">
+                            <label for="discount-code">Discount code <a id="generate-code">Generate random code</a></label>
+                            <input type="text" id="discount-code" placeholder="Enter discount code">
+                        </div>
+                        <p>Customers must enter this code at checkout</p>
+                    </div>
+                    <div class="section">
+                                <h2>Customer buys</h2>
+                                <label>
+                                    <input type="radio" name="purchase-requirement" value="minimum-quantity"> Minimum quantity of items
+                                </label>
+                                <label>
+                                    <input type="radio" name="purchase-requirement" value="minimum-amount"> Minimum purchase amount
+                                </label>
+                                <label for="quantity">Quantity</label>
+                                <input type="number" id="quantity" placeholder="Enter quantity">
+                                <label for="search-product">Specific products</label>
+                                <input type="text" id="search-product" placeholder="Search product">
+                                <h2>Customer gets</h2>
+                                <label for="quantity-gets">Quantity</label>
+        <input type="number" id="quantity-gets" placeholder="Enter quantity">
+        <label for="search-product-gets">Specific products</label>
+        <input type="text" id="search-product-gets" placeholder="Search product">
+        
+        <h2>At a discount value</h2>
+        <label>
+            <input type="radio" name="discount-value" value="free"> Free
+        </label>
+        <label>
+            <input type="radio" name="discount-value" value="amount"> Amount off each item
+        </label>
+        <label>
+            <input type="radio" name="discount-value" value="percentage" id="percentage-radio"> Percentage
+        </label>
+        
+        
+        
+        <div id="percentage-input" class="hidden">
+            <label for="percentage">Enter percentage:</label>
+            <input type="text" id="percentage" name="percentage" style="width: 300px;">
+        </div>
+    </div>
+                            <div class="section">
+                                <h2>Customer eligibility</h2>
+                                <label>
+                                    <input type="radio" name="eligibility" value="all-customers"> All customers
+                                </label>
+                                <label>
+                                    <input type="radio" name="eligibility" value="specific-segments"> Specific customer segments
+                                </label>
+                                <label>
+                                    <input type="radio" name="eligibility" value="specific-customer"> Specific customers
+                                </label>
+                            </div>
+                            <div class="section">
+                                <h2>Combination</h2>
+                                <p><b>The products can be combined with:</b></p>
+                                <label>
+                                    <input type="checkbox" name="combination" value="product-discounts"> Product discounts
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="combination" value="order-discounts"> Order discounts
+                                </label>
+                                <label>
+                                    <input type="checkbox" name="combination" value="shipping-discounts"> Shipping discounts
+                                </label>
+                            </div>
+                            <div class="section">
+                                <h2>Active dates</h2>
+                                <label for="start-date">Start date</label>
+                                <input type="date" id="start-date">
+                                <label for="end-time">End time</label>
+        <input type="time" id="end-time" name="end-time">
+                            </div>
+                            <div class="section">
+                                <button type="submit">Save</button>
+                                <button type="button" onclick="cancel()">Cancel</button>
+                            </div>
+                </div>
+                <div class="col2">
+                    <div class="summary">
+                        <h2>Summary</h2>
+                        <ul>
+                            <li>No discount code yet</li>
+                            <li>Type and method
+                                <ol>Buy X Get Y</ol>
+                                <ol>Code</ol>
+                            </li>
+                            <li>Details
+                                <ol>Customers must enter this code at checkout</ol>
+                            </li>
+                            <li>Performance
+                                <ol>Discount is not yet active</ol>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="discount.js"></script>
+    <script src="pro_script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+body {
+    font-family: 'Kumbh Sans';
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #cc886d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.reset-password-form {
+    text-align: center;
+}
+
+.reset-password-form h2 {
+    margin-bottom: 20px;
+    color: #3e0606;
+}
+
+.reset-password-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color:#3e0606;
+
+}
+
+.reset-password-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.reset-password-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3E1213;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.reset-password-form button:hover {
+    background-color:#773738
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .reset-password-form h2 {
+        font-size: 1.5em;
+    }
+}

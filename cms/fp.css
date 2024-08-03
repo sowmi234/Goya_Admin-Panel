@@ -1,0 +1,63 @@
+body {
+    font-family: 'Kumbh Sans';
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: #cc886d;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reset-password-form h2 {
+    margin-bottom: 1rem;
+    color: #3e0606;
+}
+
+.reset-password-form p {
+    margin: 0.5rem 0;
+    color: #3e0606;
+}
+
+.reset-password-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reset-password-form input {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.reset-password-form button {
+    padding: 0.5rem 1rem;
+    background-color:#3E1213;
+    /* Changed to blue */
+    color: #ffffff;
+    ;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.reset-password-form button:hover {
+    background-color: #773738;}
+
+footer {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
+    color:#78362A;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="newinventory.css">
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="order.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+    
+        <main class="new-content">
+            <header>
+                <h1>Inventory</h1>
+            </header>
+            <header class="new-header">
+                <button class="new-tab active">All</button>
+                <div class="new-con-search">
+                    <input type="text" id="searchInput" class="search-bar" oninput="searchProducts()" placeholder="Search products..." style="display: none;">
+                <div class="new-filt-con">
+                    <button class="new-search-btn" onclick="toggleSearchBar()"><i class="fas fa-search"></i></button>
+                    <button class="new-filter-btn2" ><img src="images/SVGRepo_iconCarrier (6).png" alt=""></button>
+                </div>
+                <div class="new-filt-con">
+                    <button class="new-filter-btn" onclick="toggleFilterPopup()"><img src="images/SVGRepo_iconCarrier (7).png" alt=""></button>
+                </div>
+            </header>
+            
+            <table id="new-productTable">
+                <thead>
+                    <tr id="new-productTableHeader">
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>Product</th>
+                        <th>SKU</th>
+                        <th>Unavailable</th>
+                        <th>Available</th>
+                        <th>On hand</th>
+                    </tr>
+                </thead>
+                <tbody id="new-productTableBody">
+                    <!-- Example product rows -->
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>30</td>
+                        <td>0</td>
+                        <td><input type="number" class="quantity-input"></td>
+                        <td><input type="number" class="quantity-input"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="product-checkbox"></td>
+                        <td>Lorem Ipsum</td>
+                        <td>No SKU</td>
+                        <td>0</td>
+                        <td><input type="number" class="quantity-input"></td>
+                        <td><input type="number" class="quantity-input"></td>
+                    </tr>
+                    <!-- Additional rows here -->
+                </tbody>
+            </table>
+        </main>        
+        
+    </div>
+    <script src="newinventory.js"></script>
+    <script src="script.js"></script>
+    <script src="pro_script.js"></script>
+</body>
+</html>

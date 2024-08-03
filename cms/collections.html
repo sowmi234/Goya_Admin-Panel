@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="product_all.css">
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="collect_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="manage_orders.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h1>Add Product</h1>
+            </header>
+            <div id="categories" class="cat-tab-container">
+                <div class="cat-tab" data-category-id="all">All</div>
+                <div class="cat-tab" data-category-id="others">Others</div>
+            </div>                                 
+            <div id="productTableContainer">
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAll"></th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="product" data-category-id="1">
+                            <td><input type="checkbox" class="product-checkbox"></td>
+                            <td>Smartphone</td>
+                            <td>Latest model</td>
+                            <td>$299.99</td>
+                            <td><img src="images/dummy_product.jpg" alt="Smartphone" class="product-img"></td>
+                        </tr>
+                        <tr class="product" data-category-id="1">
+                            <td><input type="checkbox" class="product-checkbox"></td>
+                            <td>Laptop</td>
+                            <td>High performance</td>
+                            <td>$899.99</td>
+                            <td><img src="images/dummy_product.jpg" alt="Laptop" class="product-img"></td>
+                        </tr>
+                        <tr class="product" data-category-id="2">
+                            <td><input type="checkbox" class="product-checkbox"></td>
+                            <td>Book 1</td>
+                            <td>Bestseller</td>
+                            <td>$19.99</td>
+                            <td><img src="images/dummy_product.jpg" alt="Book 1" class="product-img"></td>
+                        </tr>
+                        <tr class="product" data-category-id="3">
+                            <td><input type="checkbox" class="product-checkbox"></td>
+                            <td>T-Shirt</td>
+                            <td>100% Cotton</td>
+                            <td>$9.99</td>
+                            <td><img src="images/dummy_product.jpg" alt="T-Shirt" class="product-img"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="pro_script.js"></script>
+    <script src="script.js"></script>
+    <script src="collect_script.js"></script>
+</body>
+</html>

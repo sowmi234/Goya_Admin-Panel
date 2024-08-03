@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="order.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h1>Add Product</h1>
+            </header>
+            <div class="pro">
+                <div class="col1">
+                    <form id="productForm">
+                        <div class="form-section">
+                            <label for="title">Title</label>
+                            <input type="text" id="title" name="title" required placeholder="Product Name">
+                        </div>
+                        <div class="form-section">
+                            <label for="description">Description</label>
+                            <div class="tools">
+                                <img src="images/Group 12.png" alt="" class="ai">
+                                <img src="images/Vector.png" class="vector" alt="">
+                                <hr class="line">
+                                <img src="images/Paragraph.png" class="para" alt="">
+                                <img src="images/Vector.png" class="vector" alt="">
+                                <hr class="line">
+                                <img src="images/B.png" alt="">
+                                <img src="images/A.png" alt="">
+                                <img src="images/I.png"  alt="">
+                                <img src="images/U.png" alt="">
+                                <img src="images/Vector.png" class="vector" alt="">
+                                <hr class="line">
+                                <img src="images\SVGRepo_iconCarrier.png" alt="">
+                                <img src="images/Vector.png" class="vector" alt="">
+                                <hr class="line">
+                                <img src="images\Frame.png" class="link1" alt="">
+                                <img src="images/Frame (1).png" alt="">
+                                <img src="images/Frame (2).png" alt="">
+                                <hr class="line">
+                                <img src="images/Frame (3).png" alt="">
+                                <img src="images/Group 13.png"  class="link2">
+                            </div>
+                            <textarea id="description" name="description" required placeholder="Description"></textarea>
+                        </div>
+                        <div class="form-section">
+                            <label for="media">Media</label>
+                            <div class="media-upload" id="media-upload">
+                                <input type="file" id="file-input" class="file-input" accept="image/*" multiple hidden>
+                                <button type="button" class="upload_btn" onclick="document.getElementById('file-input').click();">Upload new</button>
+                                <button type="button" class="select_btn">Select existing</button>
+                                <p>Accepts images, videos, or 3D models</p>
+                                <div class="drag-area" id="drag-area">
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="form-section">
+                            <label for="category">Category</label>
+                            <input type="text" id="category" name="category" required placeholder="Description">
+                        </div>
+
+                        <div class="form-section denominations-section">
+                            <label for="denominations">Denominations</label>
+                            <div id="denominations-container">
+                                <div class="denomination-row">
+                                    <input type="number" name="denominations[]" placeholder="100.0">
+                                    <button type="button" class="remove-denomination" onclick="removeDenomination(this)">Remove</button>
+                                </div>
+                                <div class="denomination-row">
+                                    <input type="number" name="denominations[]" placeholder="150.0">
+                                    <button type="button" class="remove-denomination" onclick="removeDenomination(this)">Remove</button>
+                                </div>
+                                <div class="denomination-row">
+                                    <input type="number" name="denominations[]" placeholder="200.0">
+                                    <button type="button" class="remove-denomination" onclick="removeDenomination(this)">Remove</button>
+                                </div>
+                            </div>
+                            <button type="button" class="add-denomination" onclick="addDenomination()">Add denomination</button>
+                        </div>
+                        
+                </div>
+                <div class="col2">
+                    <div class="form-section status-section">
+                        <label for="status">Status</label>
+                        <select id="status" name="status">
+                            <option id="status active" value="active">Active</option>
+                            <option id="status draft" value="draft">Draft</option>
+                            <option id="status archived" value="archived">Archived</option>
+                        </select>
+                    </div>
+                    <div class="form-section">
+                        <label for="product-type">Product Type</label>
+                        <input type="text" id="product-type" name="product_type" placeholder="Type of Products">
+                    </div>
+                    <div class="form-section">
+                        <label for="inventory">Inventory</label>
+                        <input type="number" id="vendor" name="vendor" placeholder="100.00">
+                    </div>
+                    <div class="form-section">
+                        <label for="collections">Collections</label>
+                        <input type="text" id="collections" name="collections" placeholder="Add Collections">
+                    </div>
+                    <div class="form-section">
+                        <label for="template">Theme Template</label>
+                        <select id="template" name="template">
+                            <option value="default">Default Product</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="save_div">
+            <button type="reset" class="cancel-button">Cancel</button>
+            <button type="submit" class="save-button">Save Product</button>
+        </div>
+    </form>
+        </main>
+    </div>
+    
+    
+
+    <script src="pro_script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

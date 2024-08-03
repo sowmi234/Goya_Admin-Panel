@@ -1,0 +1,110 @@
+body {
+    font-family: 'Kumbh Sans';
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #800000;
+    color: white;
+}
+
+.header .logo h1 {
+    margin: 0;
+}
+
+.header .nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav ul li {
+    margin-left: 20px;
+}
+
+.header .nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .cart a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.reviews, .best-seller {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+.reviews h2, .best-seller h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.review-container, .best-seller-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review-item, .product-item {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.review-item img, .product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #800000;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .review-item, .product-item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .nav ul li {
+        margin: 5px 0;
+    }
+
+    .review-item, .product-item {
+        flex: 1 1 100%;
+    }
+}

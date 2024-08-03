@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Products</title>
+    <link rel="stylesheet" href="product_all.css">
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="order.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="purchase_orders.html"><i class="fas fa-file-invoice-dollar"></i> Purchase Orders</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="content">
+            <header>
+                <h1>Products</h1>
+                <button class="add_btn" onclick="location.href='add_product.html'">Add Product</button>
+            </header>
+            <div class="filter-tabs">
+                <button class="tab active" onclick="filterProducts('all')">All</button>
+                <button class="tab" onclick="filterProducts('active')">Active</button>
+                <button class="tab" onclick="filterProducts('draft')">Draft</button>
+                <button class="tab" onclick="filterProducts('archived')">Archived</button>
+                <div class="con-search">
+                    <input type="text" id="searchInput" class="search-bar" oninput="searchProducts()" placeholder="Search products..." style="display: none;">
+                <div class="filt-con">
+                    <button class="search-btn" onclick="toggleSearchBar()"><i class="fas fa-search"></i></button>
+                    <button class="filter-btn2" ><img src="images/SVGRepo_iconCarrier (6).png" alt=""></button>
+                </div>
+                <div class="filt-con">
+                    <button class="filter-btn" onclick="toggleFilterPopup()"><img src="images/SVGRepo_iconCarrier (7).png" alt=""></button>
+                </div>
+                <div id="filterPopup" class="filter-popup">
+                    <ul>
+                        <li><button onclick="applyFilter('oldest-newest')">Oldest-Newest</button></li>
+                        <li><button onclick="applyFilter('newest-oldest')">Newest-Oldest</button></li>
+                        <li><button onclick="applyFilter('a-to-z')">A to Z</button></li>
+                        <li><button onclick="applyFilter('z-to-a')">Z to A</button></li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+            
+            <table id="productTable">
+                <thead>
+                    <tr id="productTableHeader">
+                        <th><input type="checkbox" id="selectAll"></th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Media</th>
+                        <th>Category</th>
+                        <th>Status</th>
+                        <th>Product Type</th>
+                        <th>Inventory</th>
+                        <th>Collections</th>
+                        <th>Theme Template</th>
+                    </tr>
+                    <tr id="actionButtonsRow" style="display:none;">
+                        <th colspan="12">
+                            <button onclick="archiveSelectedProducts()">Archive Product</button>
+                            <button onclick="deleteSelectedProducts()">Delete Product</button>
+                            <button onclick="updateSelectedProducts()">Update Product</button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Example product row -->
+                    <tr data-url="edit_product.html?id=1" data-status="active">
+                        <td><input type="checkbox" class="product-checkbox"></td>
+                        <td >Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="img_con"> <img src="images/dummy_product.jpg"></td>
+                        <td>Lorem Ipsum</td>
+                        <td><span class="status active">Active</span></td>
+                        <td>Lorem Ipsum</td>
+                        <td>50 in stock</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr data-url="edit_product.html?id=2" data-status="draft">
+                       <td><input type="checkbox" class="product-checkbox"></td>
+                        <td >Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="img_con"> <img src="images/dummy_product.jpg"></td>
+                        <td>Lorem Ipsum</td>
+                        <td><span class="status draft">Draft</span></td>
+                        <td>Lorem Ipsum</td>
+                        <td>50 in stock</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                    <tr data-url="edit_product.html?id=3" data-status="archived">
+                        <td><input type="checkbox" class="product-checkbox"></td>
+                        <td >Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                        <td class="img_con"> <img src="images/dummy_product.jpg"></td>
+                        <td>Lorem Ipsum</td>
+                        <td><span class="status archived">Archived</span></td>
+                        <td>Lorem Ipsum</td>
+                        <td>50 in stock</td>
+                        <td>Lorem Ipsum</td>
+                        <td>Lorem Ipsum</td>
+                    </tr>
+                </tbody>                
+            </table>
+        </main>
+    </div>
+
+
+    <script src="pro_script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

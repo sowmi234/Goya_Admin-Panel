@@ -1,0 +1,397 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.up_nav {
+    display: flex;
+    width: 100%;
+    background: rgba(82, 1, 0, 1);
+    justify-content: space-between;
+}
+
+.com_logo {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.user_icon {
+    margin: 10px 20px;
+    height: 35px;
+    width: 35px;
+    padding: 2px;
+    background-color: #db4a26;
+    border-radius: 0.15rem;
+}
+
+.user_icon h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.upper {
+    padding: 0px 20px;
+    color: #e0e0e0;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: rgba(155, 90, 70, 1);
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li:hover > a,
+.sidebar nav ul li.active > a {
+    background-color: rgba(62, 18, 19, 1);
+    border-radius: 2px;
+}
+
+.sidebar nav ul .sub-menu {
+    display: none;
+    position: relative;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.sidebar nav ul li.active .sub-menu {
+    display: block;
+}
+
+.sidebar nav ul .sub-menu li {
+    margin: 0;
+}
+
+.sidebar nav ul .sub-menu li a {
+    padding: 5px 10px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidebar nav ul .sub-menu li a:hover {
+    background-color: rgba(62, 18, 19, 1);
+}
+
+.content {
+    margin-left: 230px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #e0e0e0;
+    height: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin-left: 18px;
+    color: rgb(0, 0, 0);
+}
+
+.add_btn {
+    margin: 10px 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: black;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add_btn:hover {
+    background-color: rgba(62, 18, 19, 1);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.filter-tabs .tab {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-tabs .tab.active {
+    margin: 10px;
+    background-color: rgba(62, 18, 19, 1);
+    color: #ffffff;
+}
+
+.filter-tabs .tab:hover {
+    margin: 10px;
+    background-color: rgba(155, 90, 70, 1);
+    color: #ffffff;
+} 
+
+.filter-btn , .filter-btn2{
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.filter-btn img,.filter-btn2 img{
+    height: 12px;
+    width: 12px;
+}
+
+.filter-btn , .filter-btn2:hover{
+    background-color: rgba(155, 90, 70, 1);
+    border-radius: 5px 5px 5px 5px;   
+}
+.filt-con{
+    background-color: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px;
+    padding: 0px;
+}
+.search-btn {
+    border: none;
+    margin: 5px;
+    padding: 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background-color: rgba(155, 90, 70, 1);
+    border-radius: 5px 5px 5px 5px;
+}
+
+.con-search{
+    display: flex;
+    padding-left: 650px;
+}
+#searchBar {
+    display: none;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.show-search-bar #searchBar {
+    display: inline-block;
+}
+
+.filter-btn, .search-btn {
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.filter-btn img, .search-btn i {
+    height: 12px;
+    width: 12px;
+}
+
+.filter-btn:hover, .search-btn:hover {
+    background-color: rgba(155, 90, 70, 1);
+    border-radius: 5px;
+
+}
+
+.con-search {
+    display: flex;
+    padding-left: 360px;
+}
+
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    width: 200px;
+    height: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+table thead {
+   background: rgba(217, 217, 217, 1);
+   color: #000000;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+tr{
+    border-top: 1px solid #e0e0e0; /* Only top and bottom borders */
+    border-bottom: 1px solid #e0e0e0;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+table td img{
+    width: 50px;
+    height: 50px;
+}
+
+table th {
+    text-transform: capitalize;
+}
+
+td {
+    vertical-align: middle; 
+}
+
+.status {
+    margin: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: block; 
+    width: 65px; 
+    text-align: center;
+    border-top: 1px solid #e0e0e0;  /* Add top border */
+    border-bottom: 1px solid #e0e0e0;  /* Add bottom border */
+}
+
+.status.active {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.status.draft {
+    background-color: #ffc107;
+    color: #ffffff;
+}
+
+.status.archived {
+    background-color: #dc3545;
+    color: #ffffff;
+    
+}
+
+#actionButtonsRow {
+    background-color: #f8f9fa;
+}
+
+#actionButtonsRow th {
+    text-align: center;
+    padding-left: 60%;
+}
+
+#actionButtonsRow button {
+    margin: 0 10px;
+    padding: 10px 10px;
+    border-radius: 2px;
+    background-color: white;
+    box-shadow: 0px 1px 1px 0px rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#actionButtonsRow button:hover {
+    background-color: rgba(82, 1, 0, 1);
+    color: white;
+}
+
+
+/* Basic styling for the filter popup */
+.filter-popup {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top :240px;
+    right:260px;
+    display: none; /* Initially hidden */
+}
+
+/* Make sure the filter popup is visible when toggled */
+.filter-popup.show {
+    display: block;
+}
+
+/* Style for the filter popup buttons */
+.filter-popup ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.filter-popup li {
+    margin: 5px 0;
+}
+
+.filter-popup button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.filter-popup button:hover {
+    background: #f0f0f0;
+}
