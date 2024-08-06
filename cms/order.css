@@ -1,0 +1,272 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    overflow-x:hidden;
+}
+
+.main_content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 270px;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.up_nav {
+    display: flex;
+    width: 100%;
+    background: rgba(82, 1, 0, 1);
+    justify-content: space-between;
+}
+
+.com_logo {
+    margin-top: 10px;
+    height: 40px;
+}
+
+.user_icon {
+    margin: 10px 20px;
+    height: 35px;
+    width: 35px;
+    padding: 2px;
+    background-color: #db4a26;
+    border-radius: 0.15rem;
+}
+
+.user_icon h2 {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.upper {
+    padding: 0px 20px;
+    color: #e0e0e0;
+}
+
+.sidebar {
+    width: 230px;
+    background-color: rgba(155, 90, 70, 1);
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 100%;
+    overflow: auto;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li:hover > a,
+.sidebar nav ul li.active > a {
+    background-color: rgba(62, 18, 19, 1);
+    border-radius: 2px;
+}
+
+.sidebar nav ul .sub-menu {
+    display: none;
+    position: relative;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.sidebar nav ul li.active .sub-menu {
+    display: block;
+}
+
+.sidebar nav ul .sub-menu li {
+    margin: 0;
+}
+
+.sidebar nav ul .sub-menu li a {
+    padding: 5px 10px;
+    color: #ffffff;
+    display: block;
+}
+
+.sidebar nav ul .sub-menu li a:hover {
+    background-color: rgba(62, 18, 19, 1);
+}
+
+.content {
+    margin-left: 230px;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #e0e0e0;
+}
+
+
+.up_nav {
+    background-color: #8B0000;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.com_logo {
+    height: 40px;
+}
+
+.user_icon {
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #A0522D;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 20px 0;
+}
+
+.sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar nav ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar nav ul li.active a {
+    background-color: #492409;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.main_content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.orders_section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center; /* Center align text within the section */
+}
+
+.orders_table {
+    display: inline-block; /* Allow the table to be centered by the parent */
+    width: auto; /* Adjust width to fit content */
+}
+
+.orders_table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center align the table */
+    table-layout: fixed; /* Ensure equal spacing for columns */
+}
+
+.orders_table th, .orders_table td {
+    padding: 30px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+
+.orders_table th {
+    background-color: #f2f2f2;
+}
+.orders_table tbody tr {
+    cursor: pointer;
+}
+
+.orders_table tbody tr:hover {
+    background-color: #f2f2f2; /* Optional: Add a hover effect */
+}
+
+
+.status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.status.paid {
+    background-color: #4CAF50;
+}
+
+.filter-search-bar {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px; /* Adjust this value to add space below the bar */
+}
+
+.filter {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.filter label {
+    font-weight: bold;
+}
+
+.search {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.search input {
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 16px;
+}
