@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Bill</title>
+    <link rel="stylesheet" href="order_details.css">
+    <link rel="stylesheet" href="pro_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="up_nav">
+        <div class="upper">
+            <img src="images/goya(1).png" alt="logo" class="com_logo">
+        </div>
+        <div class="upper2">
+            <div  onclick="togglePopup()">
+                <a href="#alert" class="noti_icon"><i class="fa-regular fa-bell"></i></a>
+            </div>    
+        <div class="user_icon" onclick="togglePopup()">
+            <h2>Ms</h2>
+        </div>
+
+    </div>
+    </div>
+    <div id="userPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="togglePopup()">&times;</span>
+            <p class="admin-name">John Doe</p>
+            <p>john.doe@example.com</p>
+            <button onclick="manageAccount()">Manage Account</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="create_orders.html"><i class="fas fa-box"></i> Orders</a></li>
+                    <li class="has-sub-menu active"><a href="manage_products.html"><i class="fas fa-tags"></i> Products</a></li>
+                    <li><a href="collections.html"><i class="fa-solid fa-boxes-stacked"></i>Collections</a></li>
+                    <li><a href="newinventory.html"><i class="fas fa-warehouse"></i> Inventory</a></li>
+                    <li><a href="gift_cards.html"><i class="fas fa-gift"></i> Gift Cards</a></li>
+                    <li><a href="discount.html"><i class="fas fa-percent"></i> Discounts</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header>
+                <h1> Orders</h1>
+            </header>
+                <div class="pro">
+                    <div class="col1">
+                    <h4>  ← Order #1411 </h4>
+                      <div class="left-container">
+                        <div class="status-header">
+                            <p class="status-icon">📍 Delivered</p>
+                            <p class="status-date">Oct 14</p>
+                            <button class="details-button" onclick="toggleDetails()">Show details ⯆</button>
+                        </div>
+                        <div class="status-content">
+                            <p>Haven't received your delivery? <a href="#">Let us know</a>.</p>
+                            <p>Tell us how we did for a chance to win 1000 points.</p>
+
+                        </div>
+                        <div class="status-actions">
+                            <a href="#" class="action-link-rev">Write a review</a>
+                            <a href="#" class="action-link">Buy again</a>
+                            <div class="manage-menu">
+                                <a href="#" class="action-link">Manage ⯆</a>
+                                <div class="manage-dropdown">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                       <div class="left-container">
+                        <h2>Order details</h2>
+                        <div class="order-details">
+                            <div class="details-section">
+                                <h3>Contact information</h3>
+                                <p>Pete Griffith</p>
+                                <p>pete.griffith@example.com</p>
+                            </div>
+                            <div class="details-section">
+                                <h3>Payment</h3>
+                                <p>ending with 1234 - $1,220.00</p>
+                            </div>
+                            <div class="details-section">
+                                <h3>Company</h3>
+                                <p>Plant Paradise</p>
+                            </div>
+                            <div class="details-section">
+                                <h3>Billing address</h3>
+                                <p>Montreal QG H2Y 4F4</p>
+                            </div>
+                            <div class="details-section">
+                                <h3>Shipping address</h3>
+                                <p>Pete Griffith</p>
+                                <p>St Joseph Blvd E</p>
+                                <p>Montreal QG H2Y 4F4</p>
+                                <p>Canada</p>
+                            </div>
+                            <div class="details-section">
+                                <h3>Location</h3>
+                                <p>151 St Joseph Blvd E</p>
+                                <p>Pete Griffith</p>
+                                <p>St Joseph Blvd E</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col2">
+                        <div class="right-container">
+                            <div class="order-summary-item">
+                                <img src="images/dummy_product.jpg" >
+                                <span>Jade plant</span>
+                                <span>$400.00</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <img src="images/dummy_product.jpg" >
+                                <span>Trio plants</span>
+                                <span>$600.00</span>
+                            </div>
+                            <div class="order-summary-item">
+                                <img src="images/dummy_product.jpg" >
+                                <span>Watering can</span>
+                                <span>$100.00</span>
+                            </div>
+                            <div class="order-summary-total">
+                                <div class="summary-line">
+                                    <span>Subtotal</span>
+                                    <span>$1,100.00</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Shipping</span>
+                                    <span>Free</span>
+                                </div>
+                                <div class="summary-line">
+                                    <span>Taxes</span>
+                                    <span>$120.00</span>
+                                </div>
+                                <div class="summary-line total">
+                                    <span>Total</span>
+                                    <span>CAD $1,220.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </main>
+    </div>
+    <script src="script.js"></script>
+    <script src="pro_script.js"></script>
+    <script src="order_details.js"></script>
+</body>
+</html>
