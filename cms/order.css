@@ -191,7 +191,7 @@ body {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    text-align: center; /* Center align text within the section */
+    text-align: left; /* Center align text within the section */
 }
 
 .orders_table {
