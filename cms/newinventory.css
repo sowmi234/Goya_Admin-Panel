@@ -190,15 +190,25 @@ header h1 {
     color: #ffffff;
 }
 
-.new-con-search {
-    display: flex;
-    padding-left: 360px;
+
+.show-search-bar #searchBar {
+    display: inline-block;
 }
 
-.new-con-search .new-search-bar {
+.new-con-search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    white-space: nowrap; 
+    padding-left: 300px;
+}
+.new-search-bar{
     padding: 10px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    margin: 10px 0;
+    width: 10px;
+    height: 10px;
 }
 
 .new-con-search .new-search-btn {

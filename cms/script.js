@@ -226,3 +226,5 @@ function removeDenomination(button) {
     const denominationRow = button.parentElement;
     denominationRow.remove();
 }
+
+

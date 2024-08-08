@@ -213,10 +213,7 @@ header h1 {
     border-radius: 5px 5px 5px 5px;
 }
 
-.con-search{
-    display: flex;
-    padding-left: 650px;
-}
+
 #searchBar {
     display: none;
     margin-left: 10px;
@@ -225,7 +222,7 @@ header h1 {
     border: 1px solid #ccc;
 }
 
-.show-search-bar #searchBar {
+.show-search-bar .searchBar {
     display: inline-block;
 }
 
@@ -250,15 +247,18 @@ header h1 {
 
 .con-search {
     display: flex;
-    padding-left: 360px;
+    align-items: center;
+    justify-content: flex-start; /* or space-between, depending on your layout */
+    white-space: nowrap; 
+    padding-left: 400px;
 }
 
 .search-bar {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 10px;
-    width: 200px;
+    margin: 10px 0;
+    width: 10px;
     height: 10px;
 }
 
